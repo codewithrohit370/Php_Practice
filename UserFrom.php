@@ -5,6 +5,7 @@
         $ag = $_POST['age'];
         $feedBack = $_POST['FeedBack'];
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +33,9 @@
         <button name="enter">Show details</button>
     </form>
 
-    <p>Name : <?php echo $nm?></p>
-    <p>Email : <?php echo $em?></p>
-    <p>Age : <?php echo $ag?></p>
-    <p>FeedBack : <?php echo $feedBack?></p>
+    <p>Name : <?php echo $nm ?? ''?></p>
+    <p>Email : <?php echo $em ?? ''?></p>
+    <p>Age : <?php echo $ag ?? ''?></p>
+    <p>FeedBack : <?php echo $feedBack ?? ''?></p>
 </body>
 </html>
