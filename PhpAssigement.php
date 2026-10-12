@@ -34,4 +34,25 @@
     $parimeter = 2*($length1 + $breadth1);
     echo "Parimeter of Reatangle :".$parimeter;
     echo "<br>";
+
+    //question 5;
+    $salary = 26500;
+    $increaseSalary = $salary * 5/100;
+    $newSalary = $salary + $increaseSalary;
+    echo "New Salary : ".$newSalary;
+    echo "<br>";
+
+    //Question 6
+
+    $reminder = 8 % 3;
+    echo "Reminder of 8 / 3 Is :".$reminder;
+    echo "<br>";
+
+    //question 7
+
+    $radius = 20;
+    $areaOfCircle = 3.14 * $radius * $radius;
+    echo "Area of Circle : ".$areaOfCircle;
+    echo "<br>";
+
 ?>
