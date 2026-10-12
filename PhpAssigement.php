@@ -10,4 +10,28 @@
     echo "Total Marks : ".$total;
     echo "<br>";
     echo "Avarage No : ".$avg;
+
+
+
+    //Question 2
+    $side = 7;
+    $area = $side * $side;
+    echo "<br>";
+    echo "Area of Squrae : ".$area;
+    echo "<br>";
+
+    //Question 3
+    $length = 7;
+    $breadth = 8;
+    $areaReatangle = $length * $breadth;
+    echo "Area of Reatangle : ".$areaReatangle;
+    echo "<br>";
+
+    //Question 4
+
+    $length1 = 45;
+    $breadth1 = 65;
+    $parimeter = 2*($length1 + $breadth1);
+    echo "Parimeter of Reatangle :".$parimeter;
+    echo "<br>";
 ?>
