@@ -45,7 +45,6 @@
         <input type="text" name="feedBack">
 
         <button name="btn">submit</button>
-
         <button name="btn2">Show Data</button>
     </form>
 
