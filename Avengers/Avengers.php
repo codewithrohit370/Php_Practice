@@ -40,27 +40,7 @@
 
 ?>
 
- 
-
 </div>
-<audio id="mySong" src="Lyrical_ Haule Haule Song with Lyrics  Rab Ne Bana Di Jodi  Jaideep Sahni.mp3"></audio>
-
-<script>
-  const cards = document.querySelectorAll(".card");
-  const song = document.getElementById("mySong");
-
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      if (song.paused) {
-        song.play();
-      } else {
-        song.pause();
-        song.currentTime = 0; // reset
-      }
-    });
-  });
-</script>
-   
     
 </body>
 </html>
