@@ -15,7 +15,19 @@
 <video autoplay muted loop id="bg-video">
   <source src="Untitled.mp4" type="video/mp4">
 </video>
-<h1 class="title">AVENGERS</h1>
+
+
+<header class="navbar">
+    <h1 class="title">AVENGERS</h1>
+
+    <nav class="nav-links">
+        <a href="index.php" class="active">Home</a>
+        <a href="#contact">Contact Us</a>
+        <button class="nav-btn login-btn">Login</button>
+        <button class="nav-btn signup-btn">Sign Up</button>
+    </nav>
+</header>
+
 
  <div class="card-container">
 
