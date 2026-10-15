@@ -37,7 +37,7 @@
 th, td {
   border: 1px solid #333333; 
   padding: 8px;             
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -77,7 +77,6 @@ th, td {
         </select>
 
         <button type="submit" name="submit">Submit</button>
-        <button name="btn">Show Data</button>
     </form>
 
     <table>
@@ -88,10 +87,10 @@ th, td {
             <th>Role</th>
             <th>Age</th>
             <th>Post</th>
+            <th>Update/Delete</th>
         </tr>
 
         <?php
-            if(isset($_POST['btn'])){
                 $fatch_query = "SELECT * FROM member";
                  $check_query = mysqli_query($check, $fatch_query);
 
@@ -105,10 +104,11 @@ th, td {
                 <td><?php echo $row['Role'] ?></td>
                 <td><?php echo $row['Age'] ?></td>
                 <td><?php echo $row['Guild_Post'] ?></td>
+                <td><a href="">Update</a>/ <a href="deleteUser.php?id=<?php echo $row['Member_ID'] ?>">Delete</a></td>
             </tr>
        <?php             
             }
-                }}
+                }
         ?>
     </table>
 </body>
