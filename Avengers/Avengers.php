@@ -78,7 +78,7 @@
             <div class="leader-badge">GUILD LEADER</div>
 
             <div class="leader-image">
-                <img src="images/guild-leader.jpeg"
+                <img src="mohitt.jpeg"
                      alt="Guild Leader">
             </div>
 
@@ -147,7 +147,7 @@
         <div class="member-card">
 
             <div class="member-image-box">
-                <img src="MOHIT.jpeg"
+                <img src="mohitt.jpeg"
                      alt="Member profile"
                      class="member-image">
 
@@ -340,5 +340,11 @@
 </footer>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="animation.js"></script>
 </body>
 </html>
