@@ -6,6 +6,7 @@
     <title>Avangers</title>
     <link rel="stylesheet" href="style/bg-video.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/hero-section.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +24,38 @@
     <h1 class="title">AVENGERS</h1>
 
     <nav class="nav-links">
-        <a href="index.php" class="active">Home</a>
+        <a href="Avengers.php" class="active">Home</a>
         <a href="#contact">Contact Us</a>
         <button class="nav-btn login-btn">Login</button>
         <button class="nav-btn signup-btn">Sign Up</button>
     </nav>
 </header>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <p class="hero-tag">EARTH'S MIGHTIEST HEROES</p>
+
+        <h1>
+            ASSEMBLE YOUR
+            <span>ULTIMATE TEAM</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover your squad, choose your role, and
+            fight together to become legendary.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#team" class="hero-btn primary-btn">
+                Explore Team
+            </a>
+
+            <a href="#contact" class="hero-btn secondary-btn">
+                Join the Avengers
+            </a>
+        </div>
+    </div>
+</section>
 
 
  <div class="card-container">
