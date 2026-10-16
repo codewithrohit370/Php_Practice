@@ -1,0 +1,173 @@
+/* GUILD LEADERSHIP */
+
+.leadership-section {
+    position: relative;
+    z-index: 1;
+    padding: 55px 20px 65px;
+    color: #fff;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-tag {
+    color: #ffd700;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.section-heading h2 span {
+    color: #ffd700;
+}
+
+.section-description {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.leadership-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.leader-card {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 340px;
+    padding: 45px 25px 25px;
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    cursor: pointer;            
+}
+
+.leader-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.leader-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 30px);
+    padding: 9px 16px;
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(90deg, #b8860b, #ffd700);
+    color: #111;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.leader-image {
+    width: 145px;
+    height: 145px;
+    margin: 12px auto 20px;
+    padding: 4px;
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 22px rgba(255, 215, 0, 0.25);
+    overflow: hidden;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.leader-card h3 {
+    margin: 0;
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.leader-role {
+    color: #eee;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.leader-divider {
+    width: 65px;
+    height: 2px;
+    margin: 18px auto;
+    background: linear-gradient(90deg, #b8860b, #ffd700);
+}
+
+.leader-description {
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ACTING GUILD LEADER */
+
+.acting-leader {
+    border-color: rgba(0, 198, 255, 0.55);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.06);
+}
+
+.acting-leader:hover {
+    box-shadow: 0 10px 30px rgba(0, 198, 255, 0.2);
+}
+
+.acting-badge {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: #fff;
+}
+
+.acting-image {
+    border-color: #00c6ff;
+    box-shadow: 0 0 22px rgba(0, 198, 255, 0.2);
+}
+
+.acting-leader h3 {
+    color: #00c6ff;
+}
+
+.acting-leader .leader-divider {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .leadership-section {
+        padding: 40px 16px;
+    }
+
+    .leadership-container {
+        gap: 22px;
+    }
+
+    .leader-card {
+        max-width: 360px;
+    }
+}
