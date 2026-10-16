@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/guild-leader.css">
     <link rel="stylesheet" href="style/playerShow.css">
     <link rel="stylesheet" href="style/Contact-form.css">
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -270,6 +271,74 @@
 
     </form>
 </section>
+
+
+<footer class="site-footer" id="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <a href="Avengers.php" class="footer-logo">
+                <span class="footer-shield">A</span>
+                AVENGERS
+            </a>
+
+            <p>
+                United as one. Stronger together.
+                Built to dominate.
+            </p>
+
+            <div class="footer-motto">
+                POWER <span>•</span> UNITY <span>•</span> LOYALTY
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="Avengers.php">Home</a>
+            <a href="#leadership">Guild Leadership</a>
+            <a href="#team">All Members</a>
+            <a href="#contact">Join the Guild</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Guild Leaders</h3>
+            <a href="#leadership">♛ CAPTAN</a>
+            <a href="#leadership">⚔ NG FLASH</a>
+            <a href="#contact">Contact the Guild</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect</h3>
+            <!-- Replace # with your actual social profile URLs -->
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                YouTube
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                Discord
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            &copy; <?php echo date('Y'); ?>
+            <span>AVENGERS GUILD</span>.
+            All rights reserved.
+        </p>
+
+        <a href="#top" class="back-to-top"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Back to Top ↑
+        </a>
+    </div>
+
+</footer>
+
 
 </body>
 </html>
