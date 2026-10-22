@@ -104,7 +104,7 @@ th, td {
                 <td><?php echo $row['Role'] ?></td>
                 <td><?php echo $row['Age'] ?></td>
                 <td><?php echo $row['Guild_Post'] ?></td>
-                <td><a href="">Update</a>/ <a href="deleteUser.php?id=<?php echo $row['Member_ID'] ?>">Delete</a></td>
+                <td><a href="update.php?id=<?php echo $row['Member_ID'] ?>">Update</a>/ <a href="deleteUser.php?id=<?php echo $row['Member_ID'] ?>">Delete</a></td>
             </tr>
        <?php             
             }
