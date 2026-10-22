@@ -328,7 +328,7 @@
         <p>
             &copy; <?php echo date('Y'); ?>
             <span>AVENGERS GUILD</span>.
-            All rights reserved.
+            All rights reserved. FOUNDER OF WEBSITE IS <span><a href="">3D HIMANSHU</a></span>
         </p>
 
         <a href="#top" class="back-to-top"
