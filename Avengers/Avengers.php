@@ -19,7 +19,7 @@
 </head>
 <body>
 <video autoplay muted loop id="bg-video">
-  <source src="Untitled.mp4" type="video/mp4">
+  <source src="src/Avanger.mp4" type="video/mp4">
 </video>
 
 
@@ -78,12 +78,12 @@
             <div class="leader-badge">GUILD LEADER</div>
 
             <div class="leader-image">
-                <img src="mohitt.jpeg"
+                <img src="src/mohitt.jpeg"
                      alt="Guild Leader">
             </div>
 
-            <h3>CAPTAN</h3>
-            <p class="leader-role">Founder & Head of the Guild</p>
+            <h3>CAPTAIN</h3>
+            <p class="leader-role">Head of the Guild</p>
 
             <div class="leader-divider"></div>
 
@@ -100,7 +100,7 @@
             </div>
 
             <div class="leader-image acting-image">
-                <img src="images/acting-guild-leader.jpeg"
+                <img src="src/Acting leader.jpeg"
                      alt="Acting Guild Leader">
             </div>
 
@@ -160,7 +160,7 @@
         <div class="member-card">
 
             <div class="member-image-box">
-                <img src="mohitt.jpeg"
+                <img src="src/Acting leader.jpeg"
                      alt="Member profile"
                      class="member-image">
 
@@ -323,7 +323,7 @@
 
         <div class="footer-column">
             <h3>Connect</h3>
-            <!-- Replace # with your actual social profile URLs -->
+            
             <a href="#" target="_blank" rel="noopener noreferrer">
                 Instagram
             </a>
