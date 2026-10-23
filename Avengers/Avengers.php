@@ -151,7 +151,7 @@
                      alt="Member profile"
                      class="member-image">
 
-                <span class="member-status">GUILD MEMBER</span>
+                <span class="member-status"><?php echo $row['Guild_Post'];  ?></span>
             </div>
 
             <div class="member-info">
