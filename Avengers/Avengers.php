@@ -134,8 +134,21 @@
     <?php
     include_once('connection.php');
 
-    $fetch_query = "SELECT * FROM member";
+    
+        $fetch_query = "
+    SELECT * FROM member
+    ORDER BY
+        CASE
+            WHEN Guild_Post = 'Leader' THEN 1
+            WHEN Guild_Post = 'Acting Leader' THEN 2
+            WHEN Guild_Post = 'Officer' THEN 3
+            ELSE 4
+        END ASC,
+        Member_name ASC
+    ";
+
     $check_query = mysqli_query($check, $fetch_query);
+
 
     if ($check_query && mysqli_num_rows($check_query) > 0) {
     ?>
