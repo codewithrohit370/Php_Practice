@@ -44,21 +44,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 4. All member cards
-    if (document.querySelector(".member-card")) {
-        gsap.from(".member-card", {
-            scrollTrigger: {
-                trigger: ".members-section",
-                start: "top 80%",
-                toggleActions: "play none none none"
-            },
-            y: 70,
-            opacity: 0,
-            scale: 0.95,
-            duration: 0.7,
-            stagger: 0.15,
-            ease: "power2.out"
-        });
-    }
+    // if (document.querySelector(".member-card")) {
+    //     gsap.from(".member-card", {
+    //         scrollTrigger: {
+    //             trigger: ".members-section",
+    //             start: "top 80%",
+    //             toggleActions: "play none none none"
+    //         },
+    //         y: 70,
+    //         opacity: 0,
+    //         scale: 0.95,
+    //         duration: 0.7,
+    //         stagger: 0.15,
+    //         ease: "power2.out"
+    //     });
+    // }
+
+    
 
     // 5. Join Guild / Contact section
     if (document.querySelector(".contact-section")) {
@@ -120,3 +122,4 @@ document.addEventListener("DOMContentLoaded", function () {
         ScrollTrigger.refresh();
     });
 });
+
