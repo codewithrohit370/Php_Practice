@@ -12,30 +12,30 @@
 }
 
 
-.title{
-  text-align:center;
-  font-size:24px;
-  font-weight:900;
-  letter-spacing:10px;
-  text-transform:uppercase;
-  background: linear-gradient(90deg,#ffd700,#ffb300,#fff176,#ffb300,#ffd700);
-  -webkit-background-clip:text;
-  color:transparent;
-  text-shadow:
-    0 0 10px rgba(255,215,0,0.6),
-    0 0 20px rgba(255,215,0,0.4);
-  position: relative;
-  z-index: 1;
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffd700, #ffb300, #fff176, #ffb300, #ffd700);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow:
+        0 0 10px rgba(255, 215, 0, 0.6),
+        0 0 20px rgba(255, 215, 0, 0.4);
+    position: relative;
+    z-index: 1;
 }
 
-.title::after{
-  content:"";
-  display:block;
-  width:160px;
-  height:3px;
-  margin:0px auto;
-  background:linear-gradient(90deg,#ffd700,#fff176,#ffd700);
-  border-radius:4px;
+.title::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 3px;
+    margin: 0px auto;
+    background: linear-gradient(90deg, #ffd700, #fff176, #ffd700);
+    border-radius: 4px;
 }
 
 .title::first-letter {
@@ -97,8 +97,8 @@
     font-weight: 600;
     cursor: pointer;
     transition: background 0.25s ease,
-                color 0.25s ease,
-                border-color 0.25s ease;
+        color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .login-btn {
