@@ -76,6 +76,9 @@ th, td {
             <option value="Member">Member</option>
         </select>
 
+        <label for="">Select Image</label>
+        <input type="file" name="image" >
+
         <button type="submit" name="submit">Submit</button>
     </form>
 
