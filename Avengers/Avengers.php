@@ -318,6 +318,7 @@
             <h3>Guild Leaders</h3>
             <a href="#leadership">♛ CAPTAN</a>
             <a href="#leadership">⚔ NG FLASH</a>
+            <a href="#leadership">⚔ 3D HIMANSHU</a>
             <a href="#contact">Contact the Guild</a>
         </div>
 
