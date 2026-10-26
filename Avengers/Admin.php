@@ -77,7 +77,7 @@ th, td {
         </select>
 
         <label for="">Select Image</label>
-        <input type="file" name="image" >
+        <input type="file" name="image">
 
         <button type="submit" name="submit">Submit</button>
     </form>
@@ -90,6 +90,7 @@ th, td {
             <th>Role</th>
             <th>Age</th>
             <th>Post</th>
+            <th>image</th>
             <th>Update/Delete</th>
         </tr>
 
