@@ -160,7 +160,7 @@
         <div class="member-card">
 
             <div class="member-image-box">
-                <img src="src/Acting leader.jpeg"
+                <img src="src/<?php echo $row['image_path'] ?>"
                      alt="Member profile"
                      class="member-image">
 

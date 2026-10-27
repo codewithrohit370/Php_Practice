@@ -6,8 +6,12 @@
         $role = $_POST['role'];
         $age = $_POST['age'];
         $post = $_POST['Post'];
+        $image = $_FILES['image']['name'];
+        $tmp_name = $_FILES['image']['tmp_name'];
 
-        $query = "INSERT INTO member(Member_name, Game_name , Role , Age , Guild_Post) VALUES('$member_name' , '$game_name' , '$role' , '$age' , '$post')";
+        move_uploaded_file($tmp_name , 'src/'.$image);
+
+        $query = "INSERT INTO member(Member_name, Game_name , Role , Age , Guild_Post , image_path) VALUES('$member_name' , '$game_name' , '$role' , '$age' , '$post' , '$image')";
 
         $query_check = mysqli_query($check , $query);
 
@@ -45,7 +49,7 @@ th, td {
 <body>
     <h1>Add Memeber</h1>
 
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <label>Enter Name</label>
         <input type="text" name="Mamber_name">
 
@@ -108,6 +112,7 @@ th, td {
                 <td><?php echo $row['Role'] ?></td>
                 <td><?php echo $row['Age'] ?></td>
                 <td><?php echo $row['Guild_Post'] ?></td>
+                <td> <img src="src/<?php echo $row['image_path'] ?>" width='30' height='30'></td>
                 <td><a href="update.php?id=<?php echo $row['Member_ID'] ?>">Update</a>/ <a href="deleteUser.php?id=<?php echo $row['Member_ID'] ?>">Delete</a></td>
             </tr>
        <?php             

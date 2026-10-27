@@ -62,7 +62,7 @@
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     transition: transform 0.4s ease;
 }
 
