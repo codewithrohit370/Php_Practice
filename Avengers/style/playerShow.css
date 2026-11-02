@@ -51,7 +51,8 @@
 }
 
 .member-image-box {
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 1 / 0.82;
     position: relative;
     overflow: hidden;
     background: #10141d;
@@ -63,11 +64,11 @@
     display: block;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .member-card:hover .member-image {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .member-status {
@@ -261,7 +262,7 @@
     }
 
     .member-image-box {
-        height: 160px;
+        aspect-ratio: 1 / 1;
     }
 
     .member-info {

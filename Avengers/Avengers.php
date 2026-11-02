@@ -150,6 +150,14 @@
     $check_query = mysqli_query($check, $fetch_query);
 
 
+    $cropX = isset($row['crop_x']) ? (int)$row['crop_x'] : 50;
+    $cropY = isset($row['crop_y']) ? (int)$row['crop_y'] : 50;
+
+    $cropX = max(0, min(100, $cropX));
+    $cropY = max(0, min(100, $cropY));
+
+
+
     if ($check_query && mysqli_num_rows($check_query) > 0) {
     ?>
 
@@ -162,7 +170,13 @@
             <div class="member-image-box">
                 <img src="src/<?php echo $row['image_path'] ?>"
                      alt="Member profile"
-                     class="member-image">
+                     class="member-image"
+                     style="object-position: <?php
+                         echo (int)($row['crop_x'] ?? 50);
+                             ?>% <?php
+                          echo (int)($row['crop_y'] ?? 50);
+                         ?>%;"
+                     >
 
                 <span class="member-status"><?php echo $row['Guild_Post'];  ?></span>
             </div>
