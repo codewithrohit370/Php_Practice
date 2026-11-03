@@ -1,0 +1,5 @@
+# Hide secret credentials
+/Avengers/config.php
+
+# Ignore Composer dependencies
+/Avengers/vendor/

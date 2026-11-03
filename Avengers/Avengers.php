@@ -238,22 +238,23 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+$config = require __DIR__ . '/config.php';
 
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
 try {
-    $mail->SMTPDebug = 2;                                       
+    // $mail->SMTPDebug = 2;                                       
     $mail->isSMTP();                                            
-    $mail->Host       = 'smtp.gfg.com;';                    
+    $mail->Host       = $config['smtp_host'];                    
     $mail->SMTPAuth   = true;                             
-    $mail->Username   = 'user@gfg.com';                 
-    $mail->Password   = 'password';                        
+    $mail->Username   = $config['smtp_username'];                 
+    $mail->Password   = $config['smtp_password'];                        
     $mail->SMTPSecure = 'tls';                              
     $mail->Port       = 587;  
 
-    $mail->setFrom('from@gfg.com', 'Name');           
+    $mail->setFrom('from@gfg', 'Name');           
     $mail->addAddress('receiver1@gfg.com');
     $mail->addAddress('receiver2@gfg.com', 'Name');
      
