@@ -254,14 +254,146 @@ try {
     $mail->SMTPSecure = 'tls';                              
     $mail->Port       = 587;  
 
-    $mail->setFrom('from@gfg', 'Name');           
-    $mail->addAddress('receiver1@gfg.com');
-    $mail->addAddress('receiver2@gfg.com', 'Name');
+    $mail->setFrom('rohitbgmi370@gmail.com', 'Guild Avangers');           
+    $mail->addAddress('krahul935499@gmail.com', 'Rahul Kumar');
      
     $mail->isHTML(true);                                  
-    $mail->Subject = 'Subject';
-    $mail->Body    = 'HTML message body in <b>bold</b> ';
-    $mail->AltBody = 'Body in plain text for non-HTML mail clients';
+    $mail->Subject = 'Guild Application Received | Avengers Guild';
+
+$mail->Body = '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#f1f3f6; font-family:Arial,Helvetica,sans-serif;">
+
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
+        style="background-color:#f1f3f6; padding:30px 10px;">
+        <tr>
+            <td align="center">
+
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
+                    style="max-width:600px; background-color:#ffffff; border-radius:12px; overflow:hidden;">
+
+                    <!-- Header -->
+                    <tr>
+                        <td align="center"
+                            style="background-color:#171717; padding:30px 20px; border-bottom:4px solid #d4a72c;">
+
+                            <h1 style="margin:0; color:#f5c542; font-size:28px; letter-spacing:3px;">
+                                AVENGERS
+                            </h1>
+
+                            <p style="margin:10px 0 0; color:#d1d5db; font-size:13px; letter-spacing:1px;">
+                                GUILD APPLICATION UPDATE
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Main Content -->
+                    <tr>
+                        <td style="padding:35px 30px; color:#333333;">
+
+                            <h2 style="margin:0 0 20px; color:#222222; font-size:23px;">
+                                Application Received!
+                            </h2>
+
+                            <p style="margin:0 0 16px; font-size:15px; line-height:1.8;">
+                                Hello Player,
+                            </p>
+
+                            <p style="margin:0 0 16px; font-size:15px; line-height:1.8;">
+                                Thank you for applying to join
+                                <strong style="color:#b8860b;">Avengers Guild</strong>!
+                                We are glad that you are interested in becoming a part of our team.
+                            </p>
+
+                            <p style="margin:0 0 20px; font-size:15px; line-height:1.8;">
+                                Your application has been successfully received and is
+                                currently awaiting review by our team.
+                            </p>
+
+                            <!-- Status Box -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
+                                style="background-color:#fff9e8; border:1px solid #f0d98b; border-radius:8px;">
+                                <tr>
+                                    <td style="padding:20px;">
+
+                                        <p style="margin:0 0 10px; color:#8a6508; font-size:14px; font-weight:bold;">
+                                            WHAT HAPPENS NEXT?
+                                        </p>
+
+                                        <p style="margin:0; color:#444444; font-size:14px; line-height:1.8;">
+                                            Our team will review your application and
+                                            contact you within
+                                            <strong>4–12 hours</strong> with an update
+                                            regarding your application status.
+                                        </p>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="margin:22px 0 0; font-size:14px; line-height:1.8; color:#555555;">
+                                Please be patient while we review your application.
+                                Keep an eye on your inbox for our response.
+                            </p>
+
+                            <p style="margin:25px 0 0; font-size:15px; line-height:1.8;">
+                                Good luck, and we hope to see you on the battlefield!
+                            </p>
+
+                            <p style="margin:25px 0 0; font-size:14px; line-height:1.8;">
+                                Best regards,<br>
+                                <strong style="color:#b8860b;">Avengers Guild Team</strong>
+                            </p>
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center"
+                            style="background-color:#171717; padding:20px;">
+
+                            <p style="margin:0 0 8px; color:#f5c542; font-size:13px; font-weight:bold;">
+                                AVENGERS GUILD
+                            </p>
+
+                            <p style="margin:0; color:#b0b0b0; font-size:11px; line-height:1.6;">
+                                This is an automated confirmation email.<br>
+                                Please do not reply unless instructed by our team.
+                            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+';
+
+$mail->AltBody = 'Hello Player,
+
+Thank you for applying to join Avengers Guild!
+
+Your application has been successfully received and is awaiting review. Our team will contact you within 4–12 hours with an update regarding your application status.
+
+Please be patient while we review your application.
+
+Good luck, and we hope to see you on the battlefield!
+
+Best regards,
+Avengers Guild Team';
     $mail->send();
     echo "Mail has been sent successfully!";
 } catch (Exception $e) {
