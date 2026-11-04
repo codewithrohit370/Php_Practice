@@ -242,6 +242,9 @@ $config = require __DIR__ . '/config.php';
 
 require 'vendor/autoload.php';
 
+if(isset($_POST['submit-btn'])){
+
+
 $mail = new PHPMailer(true);
 
 try {
@@ -399,7 +402,7 @@ Avengers Guild Team';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
+}
 
 ?>
 
@@ -411,7 +414,7 @@ Avengers Guild Team';
         <p>Fill in your details and take your place on the team.</p>
     </div>
 
-    <form class="guild-form" action="join-guild.php" method="POST">
+    <form class="guild-form"  method="POST">
 
         <div class="form-grid">
 
@@ -457,7 +460,7 @@ Avengers Guild Team';
 
         </div>
 
-        <button type="submit" class="submit-guild-btn">
+        <button type="submit" class="submit-guild-btn" name="submit-btn">
             SUBMIT APPLICATION <span>→</span>
         </button>
 
