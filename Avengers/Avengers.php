@@ -171,11 +171,6 @@
                 <img src="src/<?php echo $row['image_path'] ?>"
                      alt="Member profile"
                      class="member-image"
-                     style="object-position: <?php
-                         echo (int)($row['crop_x'] ?? 50);
-                             ?>% <?php
-                          echo (int)($row['crop_y'] ?? 50);
-                         ?>%;"
                      >
 
                 <span class="member-status"><?php echo $row['Guild_Post'];  ?></span>
