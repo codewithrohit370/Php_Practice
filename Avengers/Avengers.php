@@ -78,7 +78,7 @@
             <div class="leader-badge">GUILD LEADER</div>
 
             <div class="leader-image">
-                <img src="src/mohitt.jpeg"
+                <img src="src/WhatsApp Image 2026-10-16 at 3.49.32 PM.jpeg"
                      alt="Guild Leader">
             </div>
 

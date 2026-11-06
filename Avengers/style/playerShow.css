@@ -52,7 +52,7 @@
 
 .member-image-box {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1.3;
     position: relative;
     overflow: hidden;
     background: #10141d;
@@ -262,7 +262,7 @@
     }
 
     .member-image-box {
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1 / 1.2;
     }
 
     .member-info {
