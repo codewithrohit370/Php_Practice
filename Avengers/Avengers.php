@@ -437,13 +437,10 @@ Avengers Guild Team';
             </div>
 
             <div class="form-group full-width">
-                <label for="phone">Phone Number</label>
+                <label for="phone">Email ID</label>
                 <input type="tel" id="phone" name="phone"
-                       placeholder="Enter your contact number"
-                       pattern="[0-9]{10}"
-                       maxlength="10"
-                       inputmode="numeric" required>
-                <small>Enter your 10-digit mobile number.</small>
+                       placeholder="Enter your Email id" required>
+                <small>Enter your Email ID.</small>
             </div>
 
         </div>
