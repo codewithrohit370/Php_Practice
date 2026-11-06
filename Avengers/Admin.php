@@ -536,9 +536,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     canvas.toBlob(function (blob) {
 
-    console.log("1. toBlob callback started");
-    console.log("Blob:", blob);
-
     if (!blob) {
         alert("Image cropping failed!");
 
