@@ -68,6 +68,32 @@
     transition: border-color 0.25s, box-shadow 0.25s;
 }
 
+.form-group textarea {
+    width: 100%;
+    min-height: 130px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #353b48;
+    border-radius: 7px;
+    outline: none;
+    resize: vertical;
+    background: #141923;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-group textarea:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.form-group textarea::placeholder {
+    color: #777f8e;
+}
+
 .form-group input::placeholder {
     color: #777f8e;
 }

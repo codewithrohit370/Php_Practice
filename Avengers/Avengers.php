@@ -423,14 +423,20 @@ Avengers Guild Team';
                 <small>Enter your Email ID.</small>
             </div>
 
+            <div class="form-group full-width">
+                <label for="phone">Ask Query</label>
+                <textarea id="phone" name="phone"
+                       placeholder="Enter your Query" required></textarea>
+            </div>
+
         </div>
 
         <button type="submit" class="submit-guild-btn" name="submit-btn">
-            SUBMIT APPLICATION <span>→</span>
+            Ask Query <span>→</span>
         </button>
 
         <p class="form-note">
-            Your details will be submitted to the guild administrator.
+            Your Query will be submitted to the guild administrator.
         </p>
 
     </form>
