@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/playerShow.css">
     <link rel="stylesheet" href="style/Contact-form.css">
     <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/auth.css">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -28,8 +29,8 @@
     <nav class="nav-links">
         <a href="Avengers.php" class="active">Home</a>
         <a href="#contact">Contact Us</a>
-        <button class="nav-btn login-btn">Login</button>
-        <button class="nav-btn signup-btn">Sign Up</button>
+        <button class="nav-btn login-btn" onclick="openAuth('login')">Login</button>
+        <button class="nav-btn signup-btn" onclick="openAuth('signup')">Sign Up</button>
     </nav>
 </header>
 
@@ -523,6 +524,110 @@ Avengers Guild Team';
     </div>
 
 </footer>
+
+
+<!-- AUTH POPUP -->
+<div class="auth-overlay" id="authOverlay">
+
+    <div class="auth-modal">
+
+        <button type="button" class="auth-close" onclick="closeAuth()">
+            &times;
+        </button>
+
+        <div class="auth-heading">
+            <p class="auth-tag">AVENGERS GUILD</p>
+            <h2 id="authTitle">MEMBER <span>LOGIN</span></h2>
+        </div>
+
+        <!-- AUTH TABS -->
+        <div class="auth-tabs">
+            <button type="button" id="loginTab" class="auth-tab active"
+                onclick="switchAuth('login')">
+                LOGIN
+            </button>
+
+            <button type="button" id="signupTab" class="auth-tab"
+                onclick="switchAuth('signup')">
+                SIGN UP
+            </button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="auth-form" id="loginForm" method="POST">
+
+            <div class="auth-group">
+                <label>Email Address</label>
+                <input type="email" name="email"
+                    placeholder="Enter your email" required>
+            </div>
+
+            <div class="auth-group">
+                <label>Password</label>
+                <input type="password" name="password"
+                    placeholder="Enter your password" required>
+            </div>
+
+            <div class="auth-options">
+                <label>
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+
+                <a href="forgot-password.php">Forgot Password?</a>
+            </div>
+
+            <button type="submit" name="login" class="auth-submit">
+                LOGIN TO GUILD →
+            </button>
+
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form class="auth-form" id="signupForm" method="POST" hidden>
+
+            <div class="auth-group">
+                <label>Full Name</label>
+                <input type="text" name="name"
+                    placeholder="Enter your full name" required>
+            </div>
+
+            <div class="auth-group">
+                <label>Email Address</label>
+                <input type="email" name="email"
+                    placeholder="Enter your email" required>
+            </div>
+
+            <div class="auth-group">
+                <label>Create Password</label>
+                <input type="password" name="password"
+                    placeholder="Minimum 8 characters"
+                    minlength="8" required>
+            </div>
+
+            <div class="auth-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password"
+                    placeholder="Confirm your password"
+                    minlength="8" required>
+            </div>
+
+            <button type="submit" name="signup" class="auth-submit">
+                CREATE ACCOUNT →
+            </button>
+
+        </form>
+
+        <p class="auth-switch" id="authSwitchText">
+            Don't have an account?
+            <a href="#" onclick="switchAuth('signup'); return false;">
+                Sign Up
+            </a>
+        </p>
+
+    </div>
+</div>
+
 
 
 

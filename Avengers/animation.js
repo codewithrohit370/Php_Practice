@@ -123,3 +123,81 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+const authOverlay = document.getElementById('authOverlay');
+
+const loginForm = document.getElementById('loginForm');
+const signupForm = document.getElementById('signupForm');
+
+const loginTab = document.getElementById('loginTab');
+const signupTab = document.getElementById('signupTab');
+
+const authTitle = document.getElementById('authTitle');
+const authDescription = document.getElementById('authDescription');
+const authSwitchText = document.getElementById('authSwitchText');
+
+// OPEN POPUP
+function openAuth(type = 'login') {
+    authOverlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+
+    switchAuth(type);
+}
+
+// CLOSE POPUP
+function closeAuth() {
+    authOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// SWITCH LOGIN / SIGNUP
+function switchAuth(type) {
+
+    const isLogin = type === 'login';
+
+    loginForm.hidden = !isLogin;
+    signupForm.hidden = isLogin;
+
+    loginTab.classList.toggle('active', isLogin);
+    signupTab.classList.toggle('active', !isLogin);
+
+    if (isLogin) {
+        authTitle.innerHTML = 'MEMBER <span>LOGIN</span>';
+
+        authDescription.textContent =
+            'Welcome back, warrior. Enter the battlefield.';
+
+        authSwitchText.innerHTML = `
+            Don't have an account?
+            <a href="#" onclick="switchAuth('signup'); return false;">
+                Sign Up
+            </a>
+        `;
+
+    } else {
+        authTitle.innerHTML = 'CREATE <span>ACCOUNT</span>';
+
+        authSwitchText.innerHTML = `
+            Already have an account?
+            <a href="#" onclick="switchAuth('login'); return false;">
+                Login
+            </a>
+        `;
+    }
+}
+
+// CLOSE WHEN CLICKING OUTSIDE POPUP
+authOverlay.addEventListener('click', function (e) {
+    if (e.target === authOverlay) {
+        closeAuth();
+    }
+});
+
+// CLOSE WITH ESCAPE KEY
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && authOverlay.classList.contains('show')) {
+        closeAuth();
+    }
+});
+
+
