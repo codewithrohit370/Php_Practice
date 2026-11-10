@@ -415,27 +415,6 @@ Avengers Guild Team';
                        maxlength="100" required>
             </div>
 
-            <div class="form-group">
-                <label for="game_name">Game Name</label>
-                <input type="text" id="game_name"
-                       name="game_name"
-                       placeholder="Your in-game name"
-                       maxlength="100" required>
-            </div>
-
-            <div class="form-group">
-                <label for="age">Age</label>
-                <input type="number" id="age" name="age"
-                       placeholder="Enter your age"
-                       min="1" max="120" required>
-            </div>
-
-            <div class="form-group">
-                <label for="game_id">Game ID</label>
-                <input type="text" id="game_id" name="game_id"
-                       placeholder="Enter your game ID"
-                       maxlength="100" required>
-            </div>
 
             <div class="form-group full-width">
                 <label for="phone">Email ID</label>
