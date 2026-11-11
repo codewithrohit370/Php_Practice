@@ -53,7 +53,7 @@
                 Explore Team
             </a>
 
-            <a href="#contact" class="hero-btn secondary-btn">
+            <a onclick="openAuth('signup')" class="hero-btn secondary-btn">
                 Join the Avengers
             </a>
         </div>

@@ -70,7 +70,7 @@
 
 .form-group textarea {
     width: 100%;
-    min-height: 130px;
+    min-height: 80px;
     margin-top: 10px;
     box-sizing: border-box;
     padding: 13px 14px;
