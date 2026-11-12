@@ -29,35 +29,37 @@
 
 
 <form method="post">
-        <label>Enter Name</label>
-        <input type="text" name="Mamber_name" value="<?php echo $row['Member_name']; ?>">
+    <label>Enter Name</label>
+    <input type="text" name="Mamber_name" value="<?php echo $row['Member_name']; ?>">
 
-        <br>
+    <br>
 
-        <label>Enter Game Name</label>
-        <input type="text" name="Game_name" value="<?php echo $row['Game_name']; ?>">
-        
-        <label for="">Role</label>
-        <select name="role">
-            <option value="">Select Role</option>
-            <option value="Rusher" <?php if ($row['Role'] == 'Rusher') echo 'selected'; ?> >Rusher</option>
-            <option value="Sniper" <?php if ($row['Role'] == 'Sniper') echo 'selected'; ?> >Sniper</option>
-            <option value="Secondary Rusher"  <?php if ($row['Role'] == 'Secondary Rusher') echo 'selected'; ?> >Secondary Rusher</option>
-            <option value="Nader" <?php if ($row['Role'] == 'Nader') echo 'selected'; ?> >Nader</option>
-            <option value="All Rounder"   <?php if ($row['Role'] == 'All Rounder') echo 'selected'; ?> >All Rounder</option>
-        </select>
+    <label>Enter Game Name</label>
+    <input type="text" name="Game_name" value="<?php echo $row['Game_name']; ?>">
 
-        <label for="">Enter Age</label>
-        <input type="number" name="age" value="<?php echo $row['Age']; ?>" >
-        
-        <label for="">Post</label>
-        <select name="Post" value="<?php echo $row['Guild_Post']; ?>">
-            <option value="">Select Post</option>
-            <option value="Leader" <?php if($row['Guild_Post'] == 'Leader') echo 'selected'?> >Leader</option>
-            <option value="Acting Leader" <?php if($row['Guild_Post'] == 'Acting Leader') echo 'selected'?>>Acting Leader</option>
-            <option value="Officer" <?php if($row['Guild_Post'] == 'Officer') echo 'selected'?>>Officer</option>
-            <option value="Member" <?php if($row['Guild_Post'] == 'Member') echo 'selected'?>>Member</option>
-        </select>
+    <label for="">Role</label>
+    <select name="role">
+        <option value="">Select Role</option>
+        <option value="Rusher" <?php if ($row['Role']=='Rusher' ) echo 'selected' ; ?> >Rusher</option>
+        <option value="Sniper" <?php if ($row['Role']=='Sniper' ) echo 'selected' ; ?> >Sniper</option>
+        <option value="Secondary Rusher" <?php if ($row['Role']=='Secondary Rusher' ) echo 'selected' ; ?> >Secondary
+            Rusher</option>
+        <option value="Nader" <?php if ($row['Role']=='Nader' ) echo 'selected' ; ?> >Nader</option>
+        <option value="All Rounder" <?php if ($row['Role']=='All Rounder' ) echo 'selected' ; ?> >All Rounder</option>
+    </select>
 
-        <button name="submit">Submit</button>
-    </form>
+    <label for="">Enter Age</label>
+    <input type="number" name="age" value="<?php echo $row['Age']; ?>">
+
+    <label for="">Post</label>
+    <select name="Post" value="<?php echo $row['Guild_Post']; ?>">
+        <option value="">Select Post</option>
+        <option value="Leader" <?php if($row['Guild_Post']=='Leader' ) echo 'selected' ?> >Leader</option>
+        <option value="Acting Leader" <?php if($row['Guild_Post']=='Acting Leader' ) echo 'selected' ?>>Acting Leader
+        </option>
+        <option value="Officer" <?php if($row['Guild_Post']=='Officer' ) echo 'selected' ?>>Officer</option>
+        <option value="Member" <?php if($row['Guild_Post']=='Member' ) echo 'selected' ?>>Member</option>
+    </select>
+
+    <button name="submit">Submit</button>
+</form>
