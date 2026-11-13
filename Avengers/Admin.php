@@ -27,6 +27,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,19 +35,19 @@
 </head>
 
 <style>
-   table {
-  width: 100%;
-  border-collapse: collapse; 
-}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-th, td {
-  border: 1px solid #333333; 
-  padding: 8px;             
-  text-align: center;
-}
-
-
+    th,
+    td {
+        border: 1px solid #333333;
+        padding: 8px;
+        text-align: center;
+    }
 </style>
+
 <body>
     <h1>Add Memeber</h1>
 
@@ -58,7 +59,7 @@ th, td {
 
         <label>Enter Game Name</label>
         <input type="text" name="Game_name">
-        
+
         <label for="">Role</label>
         <select name="role">
             <option value="">Select Role</option>
@@ -70,8 +71,8 @@ th, td {
         </select>
 
         <label for="">Enter Age</label>
-        <input type="number" name="age" >
-        
+        <input type="number" name="age">
+
         <label for="">Post</label>
         <select name="Post">
             <option value="">Select Post</option>
@@ -106,20 +107,34 @@ th, td {
                 if(mysqli_num_rows($check_query)>0){
                   while($row = mysqli_fetch_assoc($check_query)){
                     ?>
-            <tr>
-                <td><?php echo $row['Member_ID'] ?></td>
-                <td><?php echo $row['Member_name'] ?></td>
-                <td><?php echo $row['Game_name'] ?></td>
-                <td><?php echo $row['Role'] ?></td>
-                <td><?php echo $row['Age'] ?></td>
-                <td><?php echo $row['Guild_Post'] ?></td>
-                <td> <img src="src/<?php echo $row['image_path'] ?>" width='30' height='30'></td>
-                <td><a href="update.php?id=<?php echo $row['Member_ID'] ?>">Update</a>/ <a href="deleteUser.php?id=<?php echo $row['Member_ID'] ?>">Delete</a></td>
-            </tr>
-       <?php             
+        <tr>
+            <td>
+                <?php echo $row['Member_ID'] ?>
+            </td>
+            <td>
+                <?php echo $row['Member_name'] ?>
+            </td>
+            <td>
+                <?php echo $row['Game_name'] ?>
+            </td>
+            <td>
+                <?php echo $row['Role'] ?>
+            </td>
+            <td>
+                <?php echo $row['Age'] ?>
+            </td>
+            <td>
+                <?php echo $row['Guild_Post'] ?>
+            </td>
+            <td> <img src="src/<?php echo $row['image_path'] ?>" width='30' height='30'></td>
+            <td><a href="update.php?id=<?php echo $row['Member_ID'] ?>">Update</a>/ <a
+                    href="deleteUser.php?id=<?php echo $row['Member_ID'] ?>">Delete</a></td>
+        </tr>
+        <?php             
             }
                 }
         ?>
     </table>
 </body>
+
 </html>
