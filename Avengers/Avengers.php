@@ -1,3 +1,10 @@
+<?php
+include_once('connection.php');
+    include('authication.php');
+    include("login.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,9 +141,6 @@
         </div>
 
         <?php
-    include_once('connection.php');
-    include('authication.php');
-
     
         $fetch_query = "
     SELECT * FROM member
