@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="leader-image acting-image">
-                    <img src="src/Acting leader.jpeg" alt="Acting Guild Leader">
+                    <img src="src/s8.jpg" alt="Acting Guild Leader">
                 </div>
 
                 <h3>NG FLASH</h3>
@@ -397,7 +397,7 @@ Avengers Guild Team';
 
         <div class="contact-heading">
             <p class="section-tag">BECOME A WARRIOR</p>
-            <h2>JOIN THE <span>GUILD</span></h2>
+            <h2>Ask<span>Query</span></h2>
             <p>Fill in your details and take your place on the team.</p>
         </div>
 
@@ -589,10 +589,8 @@ Avengers Guild Team';
             </form>
 
             <p class="auth-switch" id="authSwitchText">
-                Don't have an account?
-                <a href="#" onclick="switchAuth('signup'); return false;">
-                    Sign Up
-                </a>
+                    Don't have an account?
+                  <a href="#" id="authSwitchLink">Sign Up</a>
             </p>
 
         </div>

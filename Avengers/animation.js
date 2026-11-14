@@ -135,6 +135,7 @@ const signupTab = document.getElementById('signupTab');
 const authTitle = document.getElementById('authTitle');
 const authDescription = document.getElementById('authDescription');
 const authSwitchText = document.getElementById('authSwitchText');
+const authSwitchLink = document.getElementById('authSwitchLink');
 
 // OPEN POPUP
 function openAuth(type = 'login') {
@@ -162,27 +163,24 @@ function switchAuth(type) {
     signupTab.classList.toggle('active', !isLogin);
 
     if (isLogin) {
+
         authTitle.innerHTML = 'MEMBER <span>LOGIN</span>';
 
-        authDescription.textContent =
-            'Welcome back, warrior. Enter the battlefield.';
+        authSwitchText.firstChild.textContent =
+            "Don't have an account? ";
 
-        authSwitchText.innerHTML = `
-            Don't have an account?
-            <a href="#" onclick="switchAuth('signup'); return false;">
-                Sign Up
-            </a>
-        `;
+        authSwitchLink.textContent = "Sign Up";
+        authSwitchLink.dataset.target = "signup";
 
     } else {
+
         authTitle.innerHTML = 'CREATE <span>ACCOUNT</span>';
 
-        authSwitchText.innerHTML = `
-            Already have an account?
-            <a href="#" onclick="switchAuth('login'); return false;">
-                Login
-            </a>
-        `;
+        authSwitchText.firstChild.textContent =
+            "Already have an account? ";
+
+        authSwitchLink.textContent = "Login";
+        authSwitchLink.dataset.target = "login";
     }
 }
 
@@ -191,6 +189,14 @@ authOverlay.addEventListener('click', function (e) {
     if (e.target === authOverlay) {
         closeAuth();
     }
+});
+
+authSwitchLink.addEventListener('click', function (e) {
+
+    e.preventDefault();
+
+    switchAuth(this.dataset.target);
+
 });
 
 // CLOSE WITH ESCAPE KEY
