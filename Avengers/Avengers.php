@@ -135,6 +135,7 @@
 
         <?php
     include_once('connection.php');
+    include('authication.php');
 
     
         $fetch_query = "
@@ -588,6 +589,12 @@ Avengers Guild Team';
 
             </form>
 
+            <?php if (!empty($signupMessage)) { ?>
+                <p class="auth-message">
+                    <?php echo htmlspecialchars($signupMessage); ?>
+                </p>
+            <?php } ?>
+
             <p class="auth-switch" id="authSwitchText">
                     Don't have an account?
                   <a href="#" id="authSwitchLink">Sign Up</a>
@@ -604,6 +611,19 @@ Avengers Guild Team';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script src="animation.js"></script>
+
+<?php if (isset($_POST['signup'])) { ?>
+
+<script>
+    window.addEventListener('load', function () {
+        openAuth('signup');
+    });
+</script>
+
+<?php } ?>
+
+</body>
+</html>
 </body>
 
 </html>
