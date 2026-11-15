@@ -18,8 +18,8 @@ if (isset($_POST['login'])) {
     } else {
 
         // 2. Find user by email
-        $query = "SELECT user_id, full_name, email, password
-                  FROM authentication WHERE email = ?";
+       $query = "SELECT user_id, full_name, email, password, account_role
+          FROM authentication WHERE email = ?";
 
         $stmt = mysqli_prepare($check, $query);
 
@@ -41,26 +41,25 @@ if (isset($_POST['login'])) {
             // 4. Verify password
             if (password_verify($password, $user['password'])) {
 
-                // 5. Create session
                 session_regenerate_id(true);
 
-                
-                // 6. Redirect according to role
-                if ($user['account_role'] === 'admin') {
-                    
-                    header("Location: admin-dashboard.php");
-                    exit();
-                    
-                    } else {
-                        $_SESSION['user_id'] = $user['user_id'];
-                        $_SESSION['name'] = $user['full_name'];
-                        $_SESSION['email'] = $user['email'];
-                    header("Location: member-dashboard.php");
-                    exit();
+                    $_SESSION['user_id'] = $user['user_id'];
+                    $_SESSION['name'] = $user['full_name'];
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['role'] = $user['account_role'];
 
-                }
+    if ($user['account_role'] === 'admin') {
 
-            } else {
+        header("Location: Admin.php");
+        exit();
+
+    } else {
+
+        header("Location: member-dashboard.php");
+        exit();
+
+    }
+} else {
 
                 $loginMessage = "Incorrect email or password!";
 
