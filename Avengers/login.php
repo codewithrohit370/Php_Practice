@@ -1,8 +1,7 @@
 <?php
 
-if (session_status() === PHP_SESSION_NONE) {
     session_start();
-}
+
 
 $loginMessage = "";
 
@@ -56,7 +55,6 @@ if (isset($_POST['login'])) {
                         $_SESSION['user_id'] = $user['user_id'];
                         $_SESSION['name'] = $user['full_name'];
                         $_SESSION['email'] = $user['email'];
-                        $_SESSION['role'] = $user['account_role'];
                     header("Location: member-dashboard.php");
                     exit();
 
