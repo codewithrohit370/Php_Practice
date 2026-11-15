@@ -1,0 +1,111 @@
+/* Member dashboard - matches the existing Avengers black and gold theme */
+.profile-page {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, 92%);
+    margin: 0 auto;
+    padding: 55px 0 80px;
+    color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+}
+.welcome-heading { text-align: center; margin-bottom: 34px; }
+.profile-eyebrow {
+    color: #ffd700;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0 0 12px;
+}
+.welcome-heading h2 {
+    margin: 0;
+    font-size: clamp(27px, 4vw, 43px);
+    font-weight: 900;
+    text-shadow: 0 0 18px rgba(0,0,0,.8);
+}
+.welcome-heading h2 span, .profile-card-heading h2 span { color: #ffd700; }
+.welcome-heading > p:last-child { color: #c7c7c7; line-height: 1.7; }
+
+.announcement-section, .member-profile-card {
+    background: rgba(8, 8, 8, .82);
+    border: 1px solid rgba(255, 215, 0, .35);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+    overflow: hidden;
+}
+.announcement-topline {
+    display: flex; align-items: center; gap: 10px;
+    padding: 17px 22px;
+    border-bottom: 1px solid rgba(255,215,0,.18);
+    color: #ffd700; font-size: 11px; font-weight: 800; letter-spacing: 2px;
+}
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffd700; box-shadow: 0 0 10px #ffd700; }
+.announcement-count { margin-left: auto; color: #aaa; letter-spacing: 1px; }
+.announcement-carousel { min-height: 235px; position: relative; padding: 34px 34px 62px; box-sizing: border-box; }
+.announcement-slide { display: none; animation: announcementIn .45s ease; max-width: 760px; }
+.announcement-slide.active { display: block; }
+.announcement-label { color: #ffd700; font-size: 10px; letter-spacing: 3px; font-weight: 800; }
+.announcement-slide h3 { font-size: clamp(22px, 3vw, 32px); margin: 13px 0 10px; }
+.announcement-slide p { color: #c7c7c7; line-height: 1.8; max-width: 650px; margin: 0; }
+@keyframes announcementIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.carousel-controls { position: absolute; right: 25px; bottom: 18px; display: flex; align-items: center; gap: 14px; }
+.carousel-controls > button {
+    width: 32px; height: 32px; border: 1px solid rgba(255,215,0,.5);
+    color: #ffd700; background: transparent; border-radius: 50%; font-size: 23px; cursor: pointer;
+}
+.carousel-controls > button:hover { background: #d5a900; color: #111; }
+.carousel-dots { display: flex; gap: 7px; }
+.carousel-dots button { width: 7px; height: 7px; border: 0; border-radius: 10px; padding: 0; background: #666; cursor: pointer; }
+.carousel-dots button.active { width: 21px; background: #ffd700; }
+
+.member-profile-card { margin-top: 25px; padding: 28px; }
+.profile-card-heading { display: flex; justify-content: space-between; align-items: center; gap: 15px; border-bottom: 1px solid rgba(255,215,0,.2); padding-bottom: 20px; }
+.profile-card-heading .profile-eyebrow { margin-bottom: 7px; }
+.profile-card-heading h2 { margin: 0; font-size: 23px; }
+.account-status { color: #d8d8d8; font-size: 12px; border: 1px solid rgba(255,215,0,.3); border-radius: 30px; padding: 8px 12px; white-space: nowrap; }
+.account-status i { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: #61d68b; }
+.profile-details { display: flex; align-items: center; gap: 30px; padding: 28px 0; }
+.large-avatar, .profile-avatar {
+    display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%;
+    color: #111; font-weight: 900; background: linear-gradient(135deg,#fff176,#d5a900);
+}
+.large-avatar { width: 100px; height: 100px; font-size: 42px; box-shadow: 0 0 25px rgba(255,215,0,.18); }
+.profile-data { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 35px; width: 100%; }
+.detail-item { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.detail-item span { color: #aaa; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; }
+.detail-item strong { color: #f5f5f5; font-size: 15px; overflow-wrap: anywhere; }
+.profile-card-footer { display: flex; gap: 12px; border-top: 1px solid rgba(255,215,0,.2); padding-top: 20px; }
+.profile-home-btn, .profile-logout-btn { padding: 12px 17px; border-radius: 5px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-decoration: none; transition: .2s; }
+.profile-home-btn { background: #d5a900; color: #111; border: 1px solid #d5a900; }
+.profile-home-btn:hover { background: #ffd700; }
+.profile-logout-btn { color: #ffd700; border: 1px solid rgba(255,215,0,.5); }
+.profile-logout-btn:hover { background: rgba(255,215,0,.1); }
+
+.profile-menu { position: relative; }
+.profile-trigger {
+    display: flex; align-items: center; gap: 9px; padding: 6px 10px;
+    border: 1px solid rgba(255,215,0,.45); border-radius: 30px;
+    color: #fff; background: rgba(0,0,0,.45); cursor: pointer; font: 600 13px 'Roboto',sans-serif;
+}
+.profile-trigger:hover { border-color: #ffd700; color: #ffd700; }
+.profile-avatar { width: 28px; height: 28px; font-size: 13px; }
+.dropdown-arrow { color: #ffd700; }
+.profile-dropdown {
+    display: none; position: absolute; right: 0; top: calc(100% + 10px); min-width: 175px;
+    padding: 7px; background: #101010; border: 1px solid rgba(255,215,0,.4);
+    border-radius: 8px; box-shadow: 0 12px 28px rgba(0,0,0,.45); z-index: 20;
+}
+.profile-dropdown.show { display: block; }
+.profile-dropdown a { display: block; padding: 11px 12px; color: #ddd; text-decoration: none; font-size: 13px; border-radius: 5px; }
+.profile-dropdown a:hover, .profile-dropdown a.selected { color: #ffd700; background: rgba(255,215,0,.08); }
+.profile-dropdown a::after { display: none; }
+.profile-dropdown .logout-link { color: #ff9c9c; }
+
+@media (max-width: 650px) {
+    .profile-page { padding-top: 35px; }
+    .announcement-carousel { padding: 27px 20px 65px; min-height: 250px; }
+    .member-profile-card { padding: 20px; }
+    .profile-details { flex-direction: column; align-items: flex-start; }
+    .profile-data { grid-template-columns: 1fr; gap: 17px; }
+    .profile-card-heading { align-items: flex-start; flex-direction: column; }
+    .profile-card-footer { flex-wrap: wrap; }
+}
