@@ -226,18 +226,18 @@ include_once('connection.php');
 
 
     <!-- Php mailer -->
-    <?php
+<?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-$config = require __DIR__ . '/config.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    $config = require __DIR__ . '/config.php';
 
-require 'vendor/autoload.php';
+    require 'vendor/autoload.php';
 
-if(isset($_POST['submit-btn'])){
+    if(isset($_POST['submit-btn'])){
 
 
-$mail = new PHPMailer(true);
+    $mail = new PHPMailer(true);
 
 try {
     // $mail->SMTPDebug = 2;                                       
