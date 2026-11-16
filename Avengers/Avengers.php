@@ -521,6 +521,14 @@ try {
                     <a href="forgot-password.php">Forgot Password?</a>
                 </div>
 
+                 <?php if (!empty($loginMessage)) { ?>
+
+                <p class="auth-message">
+                    <?php echo htmlspecialchars($loginMessage); ?>
+                </p>
+                
+                <?php } ?>
+
                 <button type="submit" name="login" class="auth-submit">
                     LOGIN TO GUILD →
                 </button>
@@ -585,6 +593,15 @@ try {
 <script>
     window.addEventListener('load', function () {
         openAuth('signup');
+    });
+</script>
+
+<?php } ?>
+<?php if (isset($_POST['login'])) { ?>
+
+<script>
+    window.addEventListener('load', function () {
+        openAuth('login');
     });
 </script>
 
