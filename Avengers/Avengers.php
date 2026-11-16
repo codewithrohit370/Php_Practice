@@ -238,12 +238,13 @@ include_once('connection.php');
 
     $name = trim($_POST['member_name'] ?? '');
     $email = trim($_POST['email'] ?? '');
-    $query = trim($_POST['query'] ?? '');
+    $query = trim($_POST['Query'] ?? '');
 
     if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($query)) {
         echo "Please enter valid details.";
     exit;
     }
+
     $mail = new PHPMailer(true);
 
 try {
@@ -260,142 +261,98 @@ try {
     $mail->addAddress($email, $name);
      
     $mail->isHTML(true);                                  
-    $mail->Subject = 'Guild Application Received | Avengers Guild';
+    $mail->Subject = 'We Received Your Query | Avengers Guild';
 
-$mail->Body = '
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Received</title>
-</head>
+    $mail->Body = '
+        <div style="margin:0;padding:30px 10px;background:#f1f3f6;font-family:Arial,sans-serif;">
 
-<body style="margin:0; padding:0; background-color:#f1f3f6; font-family:Arial,Helvetica,sans-serif;">
+            <div style="max-width:600px;margin:auto;background:#ffffff;border-radius:12px;overflow:hidden;">
 
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-        style="background-color:#f1f3f6; padding:30px 10px;">
-        <tr>
-            <td align="center">
+                <div style="background:#171717;padding:30px;text-align:center;border-bottom:4px solid #d4a72c;">
 
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-                    style="max-width:600px; background-color:#ffffff; border-radius:12px; overflow:hidden;">
+                    <h1 style="color:#f5c542;margin:0;letter-spacing:3px;">
+                        AVENGERS
+                    </h1>
 
-                    <!-- Header -->
-                    <tr>
-                        <td align="center"
-                            style="background-color:#171717; padding:30px 20px; border-bottom:4px solid #d4a72c;">
+                    <p style="color:#d1d5db;font-size:13px;">
+                        GUILD SUPPORT CENTER
+                    </p>
 
-                            <h1 style="margin:0; color:#f5c542; font-size:28px; letter-spacing:3px;">
-                                AVENGERS
-                            </h1>
+                </div>
 
-                            <p style="margin:10px 0 0; color:#d1d5db; font-size:13px; letter-spacing:1px;">
-                                GUILD APPLICATION UPDATE
-                            </p>
-                        </td>
-                    </tr>
+                <div style="padding:35px 30px;color:#333;">
 
-                    <!-- Main Content -->
-                    <tr>
-                        <td style="padding:35px 30px; color:#333333;">
+                    <h2 style="color:#222;">Query Received!</h2>
 
-                            <h2 style="margin:0 0 20px; color:#222222; font-size:23px;">
-                                Application Received!
-                            </h2>
+                    <p>Hello <strong>'.$name.'</strong>,</p>
 
-                            <p style="margin:0 0 16px; font-size:15px; line-height:1.8;">
-                                Hello Player,
-                            </p>
+                    <p style="line-height:1.8;">
+                        Thank you for contacting
+                        <strong style="color:#b8860b;">Avengers Guild</strong>.
+                    </p>
 
-                            <p style="margin:0 0 16px; font-size:15px; line-height:1.8;">
-                                Thank you for applying to join
-                                <strong style="color:#b8860b;">Avengers Guild</strong>!
-                                We are glad that you are interested in becoming a part of our team.
-                            </p>
+                    <p style="line-height:1.8;">
+                        We have successfully received your query.
+                        Our team will review your message and get back
+                        to you as soon as possible.
+                    </p>
 
-                            <p style="margin:0 0 20px; font-size:15px; line-height:1.8;">
-                                Your application has been successfully received and is
-                                currently awaiting review by our team.
-                            </p>
+                    <div style="background:#fff9e8;border:1px solid #f0d98b;
+                    padding:20px;border-radius:8px;margin:25px 0;">
 
-                            <!-- Status Box -->
-                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-                                style="background-color:#fff9e8; border:1px solid #f0d98b; border-radius:8px;">
-                                <tr>
-                                    <td style="padding:20px;">
+                        <h3 style="color:#8a6508;margin-top:0;">
+                            WHAT HAPPENS NEXT?
+                        </h3>
 
-                                        <p style="margin:0 0 10px; color:#8a6508; font-size:14px; font-weight:bold;">
-                                            WHAT HAPPENS NEXT?
-                                        </p>
+                        <h2 style="color:#222;margin-bottom:10px;">
+                            4–6 Hours
+                        </h2>
 
-                                        <p style="margin:0; color:#444444; font-size:14px; line-height:1.8;">
-                                            Our team will review your application and
-                                            contact you within
-                                            <strong>4–12 hours</strong> with an update
-                                            regarding your application status.
-                                        </p>
+                        <p style="line-height:1.7;margin-bottom:0;">
+                            Our team will review your query and reply
+                            to your email within 4–6 hours.
+                        </p>
 
-                                    </td>
-                                </tr>
-                            </table>
+                    </div>
 
-                            <p style="margin:22px 0 0; font-size:14px; line-height:1.8; color:#555555;">
-                                Please be patient while we review your application.
-                                Keep an eye on your inbox for our response.
-                            </p>
+                    <p style="line-height:1.8;">
+                        Please keep an eye on your inbox for our response.
+                    </p>
 
-                            <p style="margin:25px 0 0; font-size:15px; line-height:1.8;">
-                                Good luck, and we hope to see you on the battlefield!
-                            </p>
+                    <p style="margin-top:25px;line-height:1.8;">
+                        Best regards,<br>
+                        <strong style="color:#b8860b;">
+                            Avengers Guild Support Team
+                        </strong>
+                    </p>
 
-                            <p style="margin:25px 0 0; font-size:14px; line-height:1.8;">
-                                Best regards,<br>
-                                <strong style="color:#b8860b;">Avengers Guild Team</strong>
-                            </p>
+                </div>
 
-                        </td>
-                    </tr>
+                <div style="background:#171717;padding:20px;text-align:center;">
 
-                    <!-- Footer -->
-                    <tr>
-                        <td align="center"
-                            style="background-color:#171717; padding:20px;">
+                    <p style="color:#f5c542;font-weight:bold;">
+                        AVENGERS GUILD
+                    </p>
 
-                            <p style="margin:0 0 8px; color:#f5c542; font-size:13px; font-weight:bold;">
-                                AVENGERS GUILD
-                            </p>
+                    <p style="color:#b0b0b0;font-size:12px;">
+                        United as one. Stronger together.
+                    </p>
 
-                            <p style="margin:0; color:#b0b0b0; font-size:11px; line-height:1.6;">
-                                This is an automated confirmation email.<br>
-                                Please do not reply unless instructed by our team.
-                            </p>
+                </div>
 
-                        </td>
-                    </tr>
+            </div>
+        </div>';
 
-                </table>
+    $mail->AltBody = "Hello $name,
 
-            </td>
-        </tr>
-    </table>
+        Thank you for contacting Avengers Guild.
 
-</body>
-</html>
-';
+        We have successfully received your query.
 
-$mail->AltBody = 'Hello Player,
+        Our team will review your message and reply within 4-6 hours.
 
-Thank you for applying to join Avengers Guild!
-
-Your application has been successfully received and is awaiting review. Our team will contact you within 4–12 hours with an update regarding your application status.
-
-Please be patient while we review your application.
-
-Good luck, and we hope to see you on the battlefield!
-
-Best regards,
-Avengers Guild Team';
+        Best regards,
+        Avengers Guild Support Team";
     $mail->send();
     echo "Mail has been sent successfully!";
 } catch (Exception $e) {
