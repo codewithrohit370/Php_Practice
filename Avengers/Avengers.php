@@ -236,7 +236,14 @@ include_once('connection.php');
 
     if(isset($_POST['submit-btn'])){
 
+    $name = trim($_POST['member_name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $query = trim($_POST['query'] ?? '');
 
+    if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($query)) {
+        echo "Please enter valid details.";
+    exit;
+    }
     $mail = new PHPMailer(true);
 
 try {
@@ -250,7 +257,7 @@ try {
     $mail->Port       = 587;  
 
     $mail->setFrom('rohitbgmi370@gmail.com', 'Guild Avangers');           
-    $mail->addAddress('krahul935499@gmail.com', 'Rahul Kumar');
+    $mail->addAddress($email, $name);
      
     $mail->isHTML(true);                                  
     $mail->Subject = 'Guild Application Received | Avengers Guild';
@@ -419,13 +426,13 @@ Avengers Guild Team';
 
                 <div class="form-group full-width">
                     <label for="phone">Email ID</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your Email id" required>
+                    <input type="email" id="phone" name="email" placeholder="Enter your Email id" required>
                     <small>Enter your Email ID.</small>
                 </div>
 
                 <div class="form-group full-width">
-                    <label for="phone">Ask Query</label>
-                    <textarea id="phone" name="phone" placeholder="Enter your Query" required></textarea>
+                    <label for="Query">Ask Query</label>
+                    <textarea id="phone" name="Query" placeholder="Enter your Query" required></textarea>
                 </div>
 
             </div>
