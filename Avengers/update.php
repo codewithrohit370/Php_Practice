@@ -1,4 +1,11 @@
 <?php
+
+    session_start();
+    
+    if (!isset($_SESSION['user_id'])) {
+    header("Location: Avengers.php");
+    exit();
+}
     include_once('connection.php');
 
     $user_id = $_GET['id'];
