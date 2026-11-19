@@ -6,6 +6,13 @@
     header("Location: Avengers.php");
     exit();
 }
+
+// 3. Allow only admin
+if (!$user || $user['account_role'] !== 'admin') {
+    header("Location: member-dashboard.php");
+    exit();
+}
+
     include_once('connection.php');
 
     $user_id = $_GET['id'];

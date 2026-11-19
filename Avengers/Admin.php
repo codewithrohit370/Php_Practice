@@ -276,16 +276,24 @@ $check_query = mysqli_query($check, $fatch_query);
                 </td>
 
                 <td>
-                    <a href="update.php?id=<?php echo (int)$row['Member_ID']; ?>">
-                        Update
-                    </a>
+                      <a href="update.php?id=<?php echo (int)$row['Member_ID']; ?>">
+                            Update
+                      </a>
 
-                    /
+                            /
 
-                    <a href="deleteUser.php?id=<?php echo (int)$row['Member_ID']; ?>">
-                        Delete
-                    </a>
-                </td>
+                        <form action="deleteUser.php" method="POST" style="display:inline;"
+                        onsubmit="return confirm('Are you sure you want to delete this member?');">
+
+                        <input type="hidden" name="id"
+                            value="<?php echo (int)$row['Member_ID']; ?>">
+
+                        <input type="hidden" name="csrf_token"
+                            value="<?php echo e($_SESSION['csrf_token']); ?>">
+
+        <button type="submit">Delete</button>
+    </form>
+</td>
             </tr>
 
         <?php endwhile; ?>
@@ -300,5 +308,7 @@ $check_query = mysqli_query($check, $fatch_query);
 
 </table>
 
+
+<a href="logout.php" class="profile-logout-btn">LOG OUT</a>
 </body>
 </html>
