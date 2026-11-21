@@ -7,6 +7,11 @@
     exit();
 }
 
+    if (!$user || $user['account_role'] !== 'admin') {
+        header("Location: member-dashboard.php");
+        exit();
+    }
+
     include_once('connection.php');
 
     $user_id = $_GET['id'];
